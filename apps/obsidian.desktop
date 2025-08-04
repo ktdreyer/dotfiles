@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=Obsidian
+Exec=/home/kdreyer/AppImages/Obsidian-1.8.10.AppImage %u
+Terminal=false
+Type=Application
+StartupWMClass=obsidian
+X-AppImage-Version=1.8.10
+Comment=Obsidian
+Categories=Office;
+MimeType=text/html;x-scheme-handler/obsidian;
+#Icon=obsidian
+#Icon=/home/kdreyer/.local/share/icons/hicolor/512x512/apps/obsidian.png

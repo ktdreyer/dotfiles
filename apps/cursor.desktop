@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Name=Cursor
+GenericName=Cursor
+Comment=Editor
+Exec=/home/kdreyer/AppImages/Cursor-0.49.6-x86_64.AppImage %U
+StartupNotify=true
+Terminal=false
+Type=Application
+Categories=GTK;Development;
