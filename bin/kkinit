@@ -1,0 +1,5 @@
+#!/bin/bash
+# Similar to Apple's "kinit --keychain" option.
+# https://frankenthal.dev/post/kerberos-ssh-keys-with-keychain/
+kdestroy -A
+secret-tool lookup label kdreyer@IPA.REDHAT.COM | kinit kdreyer@IPA.REDHAT.COM
