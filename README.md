@@ -8,7 +8,16 @@ scripts and customizations for my Fedora laptop I use for development
 * `dnf install gh` - Operate GitHub, create PRs, etc. Claude uses this.
 * `oc` - log into OpenShift clusters
 
-Cursor AI
+# AI tools:
+
+* Cursor AI
+* `claude` CLI
+* `goose` CLI. From [this blog](https://blog.marcnuri.com/goose-on-machine-ai-agent-cli-introduction), run:
+   ```
+   curl -fsSL https://github.com/block/goose/releases/download/stable/download_cli.sh | bash
+   ```
+   ... and plug in the Google Gemini API key.
+
 
 ## For RHEL AI development:
 
