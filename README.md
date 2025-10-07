@@ -11,7 +11,10 @@ scripts and customizations for my Fedora laptop I use for development
 # AI tools:
 
 * Cursor AI
-* `claude` CLI
+* `claude` CLI, with the relevant MCP servers:
+   ```
+   claude mcp add playwright -s user -- npx -y @playwright/mcp@latest
+   ```
 * `goose` CLI. From [this blog](https://blog.marcnuri.com/goose-on-machine-ai-agent-cli-introduction), run:
    ```
    curl -fsSL https://github.com/block/goose/releases/download/stable/download_cli.sh | bash
