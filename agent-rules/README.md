@@ -8,5 +8,5 @@ Regarding controlling commit messages, see:
 
 ## Other resources:
 
-* The pipelines-as-code team has several cursor instructions (here)[https://github.com/openshift-pipelines/pipelines-as-code/tree/35bc4b4da7f05458ef9866d9b11f1041401ceaaa/.cursor/rules]
+* The pipelines-as-code team has several cursor instructions [here](https://github.com/openshift-pipelines/pipelines-as-code/tree/35bc4b4da7f05458ef9866d9b11f1041401ceaaa/.cursor/rules)
 * More than you could ever want at https://github.com/PatrickJS/awesome-cursorrules
