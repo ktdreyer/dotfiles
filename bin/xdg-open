@@ -1,0 +1,37 @@
+#!/bin/bash
+#
+# This script wraps xdg-open. It will open a URL in Chrome or Firefox incognito
+# if the URL starts with a particular prefix.
+#
+# This allows you to skip SSO with a main redhat.com Customer Portal account
+# and use "rosa login --use-auth-code" with a second, non-SSO Red Hat account.
+#
+# Instructions:
+#  Install this xdg-open to ~/.local/bin/
+#  rosa login --use-auth-code
+
+set -euo pipefail
+
+INCOGNITO_BROWSER="chrome"
+SSO_URL_PREFIX="https://sso.redhat.com/auth/realms/redhat-external/protocol/openid-connect/auth?access_type=offline&client_id=ocm-cli"
+
+# If the first argument is not a URL, use the real xdg-open
+if [[ ! "$1" =~ ^https?:// ]]; then
+  /usr/bin/xdg-open "$@" &
+  exit 0
+fi
+
+# Only use incognito mode for the specific SSO URL
+if [[ "$1" == "$SSO_URL_PREFIX"* ]]; then
+  if [ $INCOGNITO_BROWSER == "chrome" ]; then
+    echo $1 >> /tmp/xdg-open-url.txt
+    /usr/bin/google-chrome-stable --incognito "$@" &
+  fi
+
+  if [ $INCOGNITO_BROWSER == "firefox" ]; then
+    /usr/bin/firefox --private-window "$@" &
+  fi
+else
+  # For all other arguments, use the regular xdg-open
+  /usr/bin/xdg-open "$@" &
+fi
