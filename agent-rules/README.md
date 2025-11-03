@@ -1,5 +1,17 @@
 These are rules I want my AI agents to follow when operating in Git.
 
+# Claude
+
+I symlink my "commits.md" to vi ~/.claude/CLAUDE.md
+
+The `commands` directory has all my Claude commands.
+
+```
+ln -s ~/dev/dotfiles/agent-rules/commands/ ~/.claude/commands
+```
+
+# Cursor
+
 Cursor does not yet support storing these in Git: https://forum.cursor.com/t/global-cursor-rules-directory/50049 . it stores them in a sqlite db.
 
 Regarding controlling commit messages, see:
