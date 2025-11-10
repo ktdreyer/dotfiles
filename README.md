@@ -26,7 +26,12 @@ scripts and customizations for my Fedora laptop I use for development
    # matures.
    # See https://gitlab.com/fforster/gitlab-mcp/-/issues/31 for auth
    claude mcp add fforster-gitlab -- podman run -i --rm -v ~/.config/gitlab-mcp:/.config/gitlab-mcp:z registry.gitlab.com/fforster/gitlab-mcp:latest
+   ```
 
+   Other `~/.claude.json` settings:
+   ```
+   "gitAttribution": false,
+   "includeCoAuthoredBy": false
    ```
 
 * `goose` CLI. From [this blog](https://blog.marcnuri.com/goose-on-machine-ai-agent-cli-introduction), run:
