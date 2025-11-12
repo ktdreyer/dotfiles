@@ -28,7 +28,7 @@ scripts and customizations for my Fedora laptop I use for development
    claude mcp add fforster-gitlab -- podman run -i --rm -v ~/.config/gitlab-mcp:/.config/gitlab-mcp:z registry.gitlab.com/fforster/gitlab-mcp:latest
    ```
 
-   Other `~/.claude.json` settings:
+   Other `~/.claude/settings.json` settings:
    ```
    "gitAttribution": false,
    "includeCoAuthoredBy": false
