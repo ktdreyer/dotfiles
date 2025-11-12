@@ -2,7 +2,14 @@ These are rules I want my AI agents to follow when operating in Git.
 
 # Claude
 
-I symlink my "commits.md" to vi ~/.claude/CLAUDE.md
+I have split up my prompts into a few different Markdown files so I can organize them more easily. For now I care the most about commits.md so I've symlinked that one to `~/.claude/CLAUDE.md`.
+
+```
+ln -s ~/dev/dotfiles/agent-rules/commits.md ~/.claude/CLAUDE.md
+```
+
+In the future, perhaps I will just write a single CLAUDE.md file here in Git
+instead of splitting them up like this.
 
 The `commands` directory has all my Claude commands.
 
