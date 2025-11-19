@@ -18,6 +18,12 @@ scripts and customizations for my Fedora laptop I use for development
    ```
    claude mcp add playwright -s user -- npx -y @playwright/mcp@latest
 
+   # For mcp-atlassian, set three variables in ~/.claude/mcp-atlassian.env:
+   #   JIRA_URL=https://issues.redhat.com
+   #   JIRA_PERSONAL_TOKEN=<my personal token here>
+   #   JIRA_SSL_VERIFY=true
+   claude mcp add mcp-atlassian -s user -- podman run --rm -i --env-file ~/.claude/mcp-atlassian.env ghcr.io/sooperset/mcp-atlassian:latest
+
    # This one lacks some key APIs for code review discussions:
    # https://gitlab.com/gitlab-org/gitlab/-/issues/561564#note_2859947470
    # claude mcp add gitlab --transport http -s user https://gitlab.com/api/v4/mcp
