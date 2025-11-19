@@ -47,6 +47,6 @@ scripts and customizations for my Fedora laptop I use for development
 ## For RHEL AI development:
 
 * `dnf install glab`  - running DIIP (CI platform)
-* `oras` - download models as OCI artifacts
+* `oras` - download AI models as OCI artifacts
 * `tkn` - view Konflux build logs on GitLab MRs
 * `syft` - compare container images for differences
