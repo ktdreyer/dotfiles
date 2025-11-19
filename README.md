@@ -4,7 +4,7 @@ scripts and customizations for my Fedora laptop I use for development
 
 * `bws` - https://bitwarden.com/help/secrets-manager-cli/
 * `claude` - AI in your terminal
-* `cosign` - https://bitwarden.com/help/secrets-manager-cli.md
+* `cosign` - inspect signatures from Konflux
 * `dnf install gh` - Operate GitHub, create PRs, etc. Claude uses this.
 * `oc` - log into OpenShift clusters
 * `rosa` - create and teardown OpenShift on AWS
