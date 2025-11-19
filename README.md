@@ -2,7 +2,7 @@ scripts and customizations for my Fedora laptop I use for development
 
 # Useful utilities to install
 
-* `bws` - https://bitwarden.com/help/secrets-manager-cli/
+* `bws` - [Bitwarden CLI](https://bitwarden.com/help/secrets-manager-cli/), although this [seems abandoned](https://github.com/bitwarden/sdk-sm/issues/1347).
 * `claude` - AI in your terminal
 * `cosign` - inspect signatures from Konflux
 * `dnf install gh` - Operate GitHub, create PRs, etc. Claude uses this.
