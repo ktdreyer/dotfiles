@@ -20,7 +20,7 @@ scripts and customizations for my Fedora laptop I use for development
 
    # This one lacks some key APIs for code review discussions:
    # https://gitlab.com/gitlab-org/gitlab/-/issues/561564#note_2859947470
-   claude mcp add --transport http GitLab https://gitlab.com/api/v4/mcp
+   # claude mcp add gitlab --transport http -s user https://gitlab.com/api/v4/mcp
 
    # This one has better APIs, but may be discontinued as the official one
    # matures.
