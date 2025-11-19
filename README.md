@@ -40,6 +40,9 @@ scripts and customizations for my Fedora laptop I use for development
    ```
    ... and plug in the Google Gemini API key.
 
+* https://5ire.app/ - open-source alternative to Claude Desktop
+   ... uses Google Gemini API key.
+
 
 ## For RHEL AI development:
 
