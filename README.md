@@ -4,7 +4,7 @@ scripts and customizations for my Fedora laptop I use for development
 
 * `bws` - [Bitwarden CLI](https://bitwarden.com/help/secrets-manager-cli/), although this [seems abandoned](https://github.com/bitwarden/sdk-sm/issues/1347).
 * `claude` - AI in your terminal
-* `cosign` - inspect signatures from Konflux
+* `cosign` - examine the SBOMs that Konflux generates for images
 * `dnf install gh` - Operate GitHub, create PRs, etc. Claude uses this.
 * `oc` - log into OpenShift clusters
 * `rosa` - create and teardown OpenShift on AWS
@@ -50,4 +50,3 @@ scripts and customizations for my Fedora laptop I use for development
 * `oras` - download models as OCI artifacts
 * `tkn` - view Konflux build logs on GitLab MRs
 * `syft` - compare container images for differences
-* `cosign` - examine the SBOMs that Konflux generates for images
