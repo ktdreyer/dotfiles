@@ -25,7 +25,7 @@ scripts and customizations for my Fedora laptop I use for development
    # This one has better APIs, but may be discontinued as the official one
    # matures.
    # See https://gitlab.com/fforster/gitlab-mcp/-/issues/31 for auth
-   claude mcp add fforster-gitlab -- podman run -i --rm -v ~/.config/gitlab-mcp:/.config/gitlab-mcp:z registry.gitlab.com/fforster/gitlab-mcp:latest
+   claude mcp add fforster-gitlab -s user -- podman run -i --rm -v ~/.config/gitlab-mcp:/.config/gitlab-mcp:z registry.gitlab.com/fforster/gitlab-mcp:latest
    ```
 
    Other `~/.claude/settings.json` settings:
