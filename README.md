@@ -8,6 +8,7 @@ scripts and customizations for my Fedora laptop I use for development
 * `dnf install gh` - Operate GitHub, create PRs, etc. Claude uses this.
 * `oc` - log into OpenShift clusters
 * `rosa` - create and teardown OpenShift on AWS
+* `ocm` - manage OCM for AWS ([docs](https://github.com/openshift/assisted-service/blob/master/docs/ocm-integration.md))
 * `did` - what did you do last week? (`uv tool install did`)
 * Obsidian - note taking (AppImage)
 
