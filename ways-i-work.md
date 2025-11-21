@@ -16,6 +16,9 @@ I sign out of Slack for one day each week. They day I've selected is Friday. I w
 
 If something is urgent and important, my boss can reach me.
 
+I've found that [other company leaders find this "focus day" concept effective
+also](https://rfd.shared.oxide.computer/rfd/0083).
+
 I do not have Slack or work email installed on my phone.
 
 ## Other ideas
