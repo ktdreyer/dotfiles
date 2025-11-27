@@ -10,6 +10,7 @@ scripts and customizations for my Fedora laptop I use for development
 * `rosa` - create and teardown OpenShift on AWS
 * `ocm` - manage OCM for AWS ([docs](https://github.com/openshift/assisted-service/blob/master/docs/ocm-integration.md))
 * `did` - what did you do last week? (`uv tool install did`)
+- `k9s` - TUI for Kubernetes resources
 * Obsidian - note taking (AppImage)
 
 # AI tools:
