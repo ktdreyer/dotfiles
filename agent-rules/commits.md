@@ -8,7 +8,7 @@ Use the active voice, imperative mood, and present tense.
 
 Do not include "Fixes #" in commit messages. Only include that "Fixes #" information in GitHub PR descriptions.
 
-Keep the first line under 60 characters for good Git log readability.
+Keep the first line under 60 characters for good Git log readability. Start the first line of the commit message with a lower-case letter if it is not a proper noun.
 
 When writing Git commits:
 - use simple plaintext
