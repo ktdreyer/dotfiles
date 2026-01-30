@@ -31,6 +31,9 @@ Plugins:
    #   JIRA_URL=https://issues.redhat.com
    #   JIRA_PERSONAL_TOKEN=<my personal token here>
    #   JIRA_SSL_VERIFY=true
+   #   CONFLUENCE_URL=https://spaces.redhat.com/
+   #   CONFLUENCE_PERSONAL_TOKEN=<my personal token here>
+   # Note these will change with Jira Cloud https://personal-1d37018d.mintlify.app/docs/configuration#connection-settings
    claude mcp add mcp-atlassian -s user -- podman run --rm -i --env-file ~/.claude/mcp-atlassian.env ghcr.io/sooperset/mcp-atlassian:latest
 
    # This one lacks some key APIs for code review discussions:
