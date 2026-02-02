@@ -11,19 +11,15 @@ ln -s ~/dev/dotfiles/agent-rules/commits.md ~/.claude/CLAUDE.md
 In the future, perhaps I will just write a single CLAUDE.md file here in Git
 instead of splitting them up like this.
 
-The `commands` directory has all my Claude commands.
+The `skills` directory has all my Claude skills (formerly "commands").
 
 ```
-ln -s ~/dev/dotfiles/agent-rules/commands/ ~/.claude/commands
+ln -s ~/dev/dotfiles/agent-rules/skills/ ~/.claude/skills
 ```
 
 # Cursor
 
-Cursor does not yet support storing these in Git: https://forum.cursor.com/t/global-cursor-rules-directory/50049 . it stores them in a sqlite db.
-
-Regarding controlling commit messages, see:
-* https://docs.cursor.com/en/integrations/git
-* https://forum.cursor.com/t/rules-not-being-followed-in-git-commit-message-generation/31093/25
+Cursor [does support the agentskills.io standard](https://cursor.com/docs/context/skills). I haven't symlinked this into place yet on my workstation to try it out.
 
 ## Other resources:
 
