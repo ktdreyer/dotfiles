@@ -1,8 +1,14 @@
+---
+name: request-adr-reviews
+description: Review this task: $1
+version: 1.0.0
+---
+
 Review this task: $1
 
 Create the sub-tasks under this ticket to review the ADR document.
 
-Assign each of the sub-tasks to the members who are part of my current sprint `MidstreamIntegration Sprint 11` 
+Assign each of the sub-tasks to the members who are part of my current sprint `MidstreamIntegration Sprint 11`
 
 - Keep the review sub-task free of clutter. It should be brief and clear. Every ticket should have a one-sentence "Goal" statement at the top: `As a ___, I want to ____, so that ____.` Every ticket must have a bullet list of **Acceptance Criteria**. Each bullet is exactly one complete sentence.
 - Use the `jira_create_issue` tool as `create_issue` seems to fail.

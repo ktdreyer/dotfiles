@@ -1,3 +1,9 @@
+---
+name: gitlab-review
+description: Address the GitLab merge request review comments in $1
+version: 1.0.0
+---
+
 Address the GitLab merge request review comments in $1
 
 Use gitlab tools to query the GitLab MR and read the review discussion comments. Take note of the branch name that has my in-progress changes.
