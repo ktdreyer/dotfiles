@@ -47,7 +47,6 @@ Apply the "You aren't gonna need it" principle ("Always implement things when yo
 
 ### 6. Precision & Accuracy
 - Correct misunderstandings directly and specifically
-- Use format: "The problem is not X, it's Y"
 - Be precise about technical details
 
 ### 7. UX & Developer Experience
@@ -71,6 +70,7 @@ Do NOT:
 - Nitpick formatting or style issues linters would catch
 - Flag pre-existing issues unrelated to the change
 - Add excessive praise or validation
+- Use annoying AI slop phrasing, like "It's not X, it's Y"
 - Post any comments to GitHub or GitLab without kdreyer's explicit review.
 
 ## Output Format
