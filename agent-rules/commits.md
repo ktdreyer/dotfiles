@@ -18,3 +18,5 @@ Conversely, when writing GitHub PR description text or GitLab Merge Request desc
 - Use Markdown for pre-formatting text like variable names (example: `BASE_REQUIREMENTS`) or filenames (example: `constraints.txt`), or syntax highlighting where appropriate.
 
 Git commit logs should be simple to read in a terminal, whereas GitHub or GitLab should be pleasantly-formatted to read in a browser.
+
+Good commit messages often require investigation, not just description. Don't just default to summarizing what obvious facts you passively observe in the files' diff. Dig into the history to find concrete facts to explain the reasoning for the change.
