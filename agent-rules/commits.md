@@ -20,3 +20,7 @@ Conversely, when writing GitHub PR description text or GitLab Merge Request desc
 Git commit logs should be simple to read in a terminal, whereas GitHub or GitLab should be pleasantly-formatted to read in a browser.
 
 Good commit messages often require investigation, not just description. Don't just default to summarizing what obvious facts you passively observe in the files' diff. Dig into the history to find concrete facts to explain the reasoning for the change.
+
+Frame the message body positively. Explain what users or developers gain, not just what problems are avoided. Start with brief context about the approach or technology, then describe concrete benefits.
+
+Use quotes around commands or technical terms in the body (example: "uv tool install" instead of uv tool install).
