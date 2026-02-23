@@ -36,6 +36,9 @@ Plugins:
    # Note these will change with Jira Cloud https://personal-1d37018d.mintlify.app/docs/configuration#connection-settings
    claude mcp add mcp-atlassian -s user -- podman run --rm -i --env-file ~/.claude/mcp-atlassian.env ghcr.io/sooperset/mcp-atlassian:latest
 
+   # To test the official one:
+   #claude mcp add -s user --transport http atlassian-mcp-server https://mcp.atlassian.com/v1/sse
+
    # This one lacks some key APIs for code review discussions:
    # https://gitlab.com/gitlab-org/gitlab/-/issues/561564#note_2859947470
    # claude mcp add gitlab --transport http -s user https://gitlab.com/api/v4/mcp
