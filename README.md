@@ -2,6 +2,7 @@ scripts and customizations for my Fedora laptop I use for development
 
 # Useful utilities to install
 
+* `bw` - [Bitwarden CLI](https://bitwarden.com/blog/how-to-install-and-use-the-bitwarden-command-line-tool/) - manage password entries from the terminal
 * `bws` - [Bitwarden Secrets Manager CLI](https://bitwarden.com/help/secrets-manager-cli/), although this [seems abandoned](https://github.com/bitwarden/sdk-sm/issues/1347).
 * `claude` - AI in your terminal
 * `cosign` - examine the SBOMs that Konflux generates for images
