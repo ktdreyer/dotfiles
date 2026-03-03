@@ -28,6 +28,7 @@ Plugins:
 * `claude` CLI, with the relevant MCP servers:
    ```
    claude mcp add playwright -s user -- npx -y @playwright/mcp@latest
+   claude mcp add memory -s user -- npx -y @modelcontextprotocol/server-memory@latest
 
    # For mcp-atlassian, set three variables in ~/.claude/mcp-atlassian.env:
    #   JIRA_URL=https://issues.redhat.com
