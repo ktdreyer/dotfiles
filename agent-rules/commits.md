@@ -24,3 +24,5 @@ Good commit messages often require investigation, not just description. Don't ju
 Frame the message body positively. Explain what users or developers gain, not just what problems are avoided. Start with brief context about the approach or technology, then describe concrete benefits.
 
 Use quotes around commands or technical terms in the body (example: "uv tool install" instead of uv tool install).
+
+Add a "Co-Authored-By" Git trailer to every commit message with the model name from this session (e.g. "Claude Opus 4.6 <noreply@anthropic.com>").
