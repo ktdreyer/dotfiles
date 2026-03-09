@@ -22,10 +22,9 @@ Plugins:
 
 * Experimenting with https://github.com/l1xnan/obsidian-better-export-pdf for generating a large PDF for import to NotebookLM
 
-# AI tools:
+# Claude settings
 
-* Cursor AI
-* `claude` CLI, with the relevant MCP servers:
+I use these MCP servers:
    ```
    claude mcp add playwright -s user -- npx -y @playwright/mcp@latest
    claude mcp add memory -s user -- npx -y @modelcontextprotocol/server-memory@latest
@@ -52,11 +51,16 @@ Plugins:
    claude mcp add fforster-gitlab -s user -- podman run -i --rm -v ~/.config/gitlab-mcp:/.config/gitlab-mcp:z registry.gitlab.com/fforster/gitlab-mcp:latest
    ```
 
-   Other `~/.claude/settings.json` settings:
-   ```
-   "gitAttribution": false,
-   "includeCoAuthoredBy": false
-   ```
+Other `~/.claude/settings.json` settings:
+
+```
+"gitAttribution": false,
+"includeCoAuthoredBy": false
+```
+
+# Other AI tools:
+
+* Cursor AI
 
 * `goose` CLI. From [this blog](https://blog.marcnuri.com/goose-on-machine-ai-agent-cli-introduction), run:
    ```
