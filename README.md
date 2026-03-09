@@ -58,6 +58,8 @@ Other `~/.claude/settings.json` settings:
 "includeCoAuthoredBy": false
 ```
 
+Use `/output-style` -> "Explanatory" to help your engineering skills.
+
 # Other AI tools:
 
 * Cursor AI
