@@ -13,6 +13,7 @@ scripts and customizations for my Fedora laptop I use for development
 * `did` - what did you do last week? (`uv tool install did`)
 - `k9s` - TUI for Kubernetes resources
 - `argocd` - CLI for managing argo ([install docs](https://argo-cd.readthedocs.io/en/latest/cli_installation/))
+- [`mergify-cli`](https://pypi.org/project/mergify-cli/) - CLI for managing Mergify configs eg (`mergify config validate .mergify.yml`)
 
 # Obsidian
 
