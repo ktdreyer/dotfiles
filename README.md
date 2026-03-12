@@ -15,6 +15,10 @@ scripts and customizations for my Fedora laptop I use for development
 - `argocd` - CLI for managing argo ([install docs](https://argo-cd.readthedocs.io/en/latest/cli_installation/))
 - [`mergify-cli`](https://pypi.org/project/mergify-cli/) - CLI for managing Mergify configs eg (`mergify config validate .mergify.yml`)
 
+# Shell
+
+Install `oh-my-bash`, but unset the `LESS` var so `git branch` doesn't page.
+
 # Obsidian
 
 I use this for note taking (AppImage).
