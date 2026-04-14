@@ -45,13 +45,6 @@ I use these MCP servers:
    claude mcp add fforster-gitlab -s user -- podman run -i --rm -v ~/.config/gitlab-mcp:/.config/gitlab-mcp:z registry.gitlab.com/fforster/gitlab-mcp:latest
    ```
 
-For the Atlassian MCP server, you must run `/mcp`, choose `atlassian`, then `Authenticate` to perform OAuth authentication:
-
-```
-claude mcp add -s user --transport http atlassian https://mcp.atlassian.com/v1/mcp
-```
-
-
 Other `~/.claude/settings.json` settings (I include [attribution](https://github.com/ktdreyer/dotfiles/commit/06a46c70d2ebd8077622f7ff2c38276ac0d073f5) another way):
 
 ```
@@ -61,6 +54,37 @@ Other `~/.claude/settings.json` settings (I include [attribution](https://github
 
 Use `/output-style` -> "Explanatory" to help your engineering skills.
 
+
+## mcp-atlassian
+
+1. Create a [personal API token](https://id.atlassian.com/manage-profile/security/api-tokens)
+
+2. Set these variables in `~/.claude/mcp-atlassian.env`:
+   ```
+   JIRA_URL=https://redhat.atlassian.net/
+   JIRA_USERNAME=kdreyer@redhat.com
+   JIRA_API_TOKEN=<my personal token here>
+   JIRA_SSL_VERIFY=true
+   CONFLUENCE_URL=https://redhat.atlassian.net/wiki
+   CONFLUENCE_USERNAME=kdreyer@redhat.com
+   CONFLUENCE_API_TOKEN=<same personal token here>
+   CONFLUENCE_SSL_VERIFY=true
+   ```
+
+3. Add the MCP server:
+
+   ```
+   claude mcp add mcp-atlassian -s user -- podman run --rm -i --env-file ~/.claude/mcp-atlassian.env ghcr.io/sooperset/mcp-atlassian:latest
+   ```
+
+### TODO: Atlassian's official Jira MCP server
+
+Eventually I want to investigate Atlassian's official Jira Cloud MCP server ([docs](https://personal-1d37018d.mintlify.app/docs/configuration#connection-settings))
+
+To test the official one:
+
+```
+claude mcp add -s user --transport http atlassian-mcp-server https://mcp.atlassian.com/v1/sse
 ```
 
 # Other AI tools:
