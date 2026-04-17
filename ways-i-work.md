@@ -12,6 +12,8 @@ My Red Hat Google Calendar is public to all RH employees. You can see the detail
 
 ## Slack
 
+***Not yet implemented on my current team***:
+
 I sign out of Slack for one day each week. The day I've selected is Friday. I will use this time to focus on sprint goals and planned work in Jira and GitHub. You may see me communicate on GitHub, GitLab, etc. I just won't be on Slack. I'll check email and respond at 10am and 2pm Friday.
 
 If something is urgent and important, my boss can reach me.
