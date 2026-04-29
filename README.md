@@ -7,6 +7,7 @@ scripts and customizations for my Fedora laptop I use for development
 * `claude` - AI in your terminal
 * `cosign` - examine the SBOMs that Konflux generates for images
 * `dnf install gh` - Operate GitHub, create PRs, etc. Claude uses this.
+* `dnf install glab`  - Operate GitLab
 * `oc` - log into OpenShift clusters
 * `rosa` - create and teardown OpenShift on AWS
 * `ocm` - manage OCM for AWS ([docs](https://github.com/openshift/assisted-service/blob/master/docs/ocm-integration.md))
@@ -34,15 +35,6 @@ I use these MCP servers:
    ```
    claude mcp add playwright -s user -- npx -y @playwright/mcp@latest
    claude mcp add memory -s user -- npx -y @modelcontextprotocol/server-memory@latest
-
-   # This one lacks some key APIs for code review discussions:
-   # https://gitlab.com/gitlab-org/gitlab/-/issues/561564#note_2859947470
-   # claude mcp add gitlab --transport http -s user https://gitlab.com/api/v4/mcp
-
-   # This one has better APIs, but may be discontinued as the official one
-   # matures.
-   # See https://gitlab.com/fforster/gitlab-mcp/-/issues/31 for auth
-   claude mcp add fforster-gitlab -s user -- podman run -i --rm -v ~/.config/gitlab-mcp:/.config/gitlab-mcp:z registry.gitlab.com/fforster/gitlab-mcp:latest
    ```
 
 I no longer use Atlassian MCP servers. I use `acli` with a [personal API token](https://id.atlassian.com/manage-profile/security/api-tokens).
@@ -74,7 +66,6 @@ Use `/output-style` -> "Explanatory" to help your engineering skills.
 
 ## For RHEL AI development:
 
-* `dnf install glab`  - running DIIP (CI platform)
 * `oras` - download AI models as OCI artifacts
 * `tkn` - view Konflux build logs on GitLab MRs
 * `syft` - compare container images for differences
