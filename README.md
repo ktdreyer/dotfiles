@@ -35,9 +35,11 @@ I use these MCP servers:
    ```
    claude mcp add playwright -s user -- npx -y @playwright/mcp@latest
    claude mcp add memory -s user -- npx -y @modelcontextprotocol/server-memory@latest
+   claude mcp add -s user --transport http atlassian https://mcp.atlassian.com/v1/mcp
    ```
 
-I no longer use Atlassian MCP servers. I use `acli` with a [personal API token](https://id.atlassian.com/manage-profile/security/api-tokens).
+After adding the Atlassian MCP server, run `/mcp`, choose `atlassian`, then `Authenticate` to perform OAuth authentication.
+
 
 Other `~/.claude/settings.json` settings (I include [attribution](https://github.com/ktdreyer/dotfiles/commit/06a46c70d2ebd8077622f7ff2c38276ac0d073f5) another way):
 
