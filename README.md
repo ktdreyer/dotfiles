@@ -29,6 +29,19 @@ Plugins:
 
 * Experimenting with https://github.com/l1xnan/obsidian-better-export-pdf for generating a large PDF for import to NotebookLM
 
+# Logging into CLI tools
+
+Tips for logging into these various tools:
+
+* `acli`: Use a [personal API token](https://id.atlassian.com/manage-profile/security/api-tokens).
+
+* `glab`: Use a [personal access token](https://gitlab.com/-/user_settings/personal_access_tokens?scopes=api,write_repository).
+   * For `Token name`, write `glab cli`. For `Description`, write `red hat laptop`, or your hostname, or anything that helps you remember the location at which you will store this token. Take the defaults for all other prompts.
+   * When complete, `glab` will write your configuration (including this token) to a config file (Linux: `~/.config/glab-cli/config.yml`).
+   * You can export it to an env var like so: `export GITLAB_TOKEN=$(glab config get --host gitlab.com token)` for use in scripts that use the GitLab API directly.
+
+* `rosa login --use-auth-code`
+
 # Claude settings
 
 I use these MCP servers:
