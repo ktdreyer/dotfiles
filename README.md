@@ -42,6 +42,10 @@ Tips for logging into these various tools:
 
 * `rosa login --use-auth-code`
 
+* `ibmcloud login --sso`.
+
+   To set up 2FA: when first logging in, click [Enroll a new Factor](https://iam.cloud.ibm.com/mysecurity/index.jsp). This form will prompt you to validate your identity. Enable "U2F". Tap your Yubikey when your browser prompts you.
+
 # Claude settings
 
 I use these MCP servers:
