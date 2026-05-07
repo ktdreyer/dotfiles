@@ -87,4 +87,5 @@ Use `/output-style` -> "Explanatory" to help your engineering skills.
 
 * `oras` - download AI models as OCI artifacts
 * `tkn` - view Konflux build logs on GitLab MRs
+* kubectl `ka` plugin - ([install](https://kubearchive.github.io/kubearchive/main/cli/installation.html)) view archived Konflux build logs
 * `syft` - compare container images for differences
