@@ -83,7 +83,7 @@ Use `/output-style` -> "Explanatory" to help your engineering skills.
    ... uses Google Gemini API key.
 
 
-## For RHEL AI development:
+## For RHAII and RHEL AI development:
 
 * `oras` - download AI models as OCI artifacts
 * `tkn` - view Konflux build logs on GitLab MRs
