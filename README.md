@@ -67,8 +67,6 @@ Other `~/.claude/settings.json` settings (I include [attribution](https://github
 
 Use `/output-style` -> "Explanatory" to help your engineering skills.
 
-```
-
 # Other AI tools:
 
 * Cursor AI
