@@ -16,6 +16,7 @@ scripts and customizations for my Fedora laptop I use for development
 - `argocd` - CLI for managing argo ([install docs](https://argo-cd.readthedocs.io/en/latest/cli_installation/))
 - [`mergify-cli`](https://pypi.org/project/mergify-cli/) - CLI for managing Mergify configs eg (`mergify config validate .mergify.yml`)
 - [`acli`](https://developer.atlassian.com/cloud/acli/guides/install-linux/) - CLI for Jira
+- `dnf install vault` - for reading/writing secrets in Hashicorp Vault
 
 # Shell
 
