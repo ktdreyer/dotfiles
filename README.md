@@ -17,7 +17,7 @@ scripts and customizations for my Fedora laptop I use for development
 - [`mergify-cli`](https://pypi.org/project/mergify-cli/) - CLI for managing Mergify configs eg (`mergify config validate .mergify.yml`)
 - [`acli`](https://developer.atlassian.com/cloud/acli/guides/install-linux/) - CLI for Jira
 - `dnf install vault` - for reading/writing secrets in Hashicorp Vault
-- `dnf install trivy` - for scanning container images
+- `dnf install trivy` - for scanning container images ([skill](https://github.com/opendatahub-io/ai-helpers/blob/c29e5da99914a54f2f804384c422edb9779ced15/helpers/skills/oci-cve-checker/scripts/check_cves.sh))
 - [`kube-linter`](https://github.com/stackrox/kube-linter) - for linting k8s manifests
 
 # Shell
