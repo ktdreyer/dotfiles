@@ -21,6 +21,8 @@ If something is urgent and important, my boss can reach me.
 I've found that [other company leaders find this "focus day" concept effective
 also](https://rfd.shared.oxide.computer/rfd/0083).
 
+An absolutely critical part of this: my entire team knows about this and feels encouraged to do the same.
+
 I do not have Slack or work email installed on my phone.
 
 ## Other ideas
