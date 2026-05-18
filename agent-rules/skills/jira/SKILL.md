@@ -29,22 +29,43 @@ With `acli`, descriptions must be plain text or ADF JSON. Jira does not render M
 
 To set custom fields on an existing issue, use the Jira REST API directly.
 
-### Extracting the acli API token
+### Assignee
+
+Do not use `@me` with `acli` — it resolves to the wrong account. Always use
+the explicit email address (e.g., `kdreyer@redhat.com`).
+
+### Extracting acli credentials
 
 On Linux, `acli` stores its API token in gnome-keyring, not in config files.
-Extract it using the `current_profile` from acli's config:
+Extract all credentials from acli's config and keyring:
 
 ```bash
 PROFILE=$(yq '.current_profile' ~/.config/acli/jira_config.yaml)
 JIRA_TOKEN=$(secret-tool lookup service acli username "jira:${PROFILE}")
+JIRA_EMAIL=$(yq '.profiles[0].email' ~/.config/acli/jira_config.yaml)
+JIRA_SITE=$(yq '.profiles[0].site' ~/.config/acli/jira_config.yaml)
 ```
 
 ### REST API call to set custom fields
 
 ```bash
 curl -s -X PUT \
-  -u "<email>:${JIRA_TOKEN}" \
+  -u "${JIRA_EMAIL}:${JIRA_TOKEN}" \
   -H "Content-Type: application/json" \
-  "https://<site>.atlassian.net/rest/api/3/issue/<KEY>" \
+  "https://${JIRA_SITE}/rest/api/3/issue/<KEY>" \
   -d '{"fields":{"customfield_10001":"<team-uuid>","components":[{"name":"<component>"}]}}'
 ```
+
+### REST API call to assign issues to a sprint
+
+`acli` has no sprint-assignment subcommand. Use the Agile REST API:
+
+```bash
+curl -s -X POST \
+  -u "${JIRA_EMAIL}:${JIRA_TOKEN}" \
+  -H "Content-Type: application/json" \
+  "https://${JIRA_SITE}/rest/agile/1.0/sprint/<SPRINT_ID>/issue" \
+  -d '{"issues":["KEY-1","KEY-2"]}'
+```
+
+A 204 response means success.
