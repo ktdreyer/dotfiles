@@ -90,3 +90,4 @@ Use `/output-style` -> "Explanatory" to help your engineering skills.
 * `tkn` - ([docs](https://tekton.dev/docs/cli/)) view Konflux build logs on GitLab MRs
 * kubectl `ka` plugin - ([install](https://kubearchive.github.io/kubearchive/main/cli/installation.html)) view archived Konflux build logs
 * `syft` - compare container images for differences
+* `ec` - ([install](https://conforma.dev/docs/user-guide/cli.html)) for debugging conforma violations
