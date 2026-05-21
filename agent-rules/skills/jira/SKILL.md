@@ -9,6 +9,8 @@ Execute the `acli` utility to look up tickets. For example:
 acli jira workitem view AIPCC-1
 ```
 
+Look at comments on tickets: `acli jira workitem comment list --key AIPCC-1`
+
 Discover more with this:
 
 ```
