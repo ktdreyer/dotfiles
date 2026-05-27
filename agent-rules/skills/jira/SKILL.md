@@ -11,6 +11,8 @@ acli jira workitem view AIPCC-1
 
 Look at comments on tickets: `acli jira workitem comment list --key AIPCC-1`
 
+Add a comment: `acli jira workitem comment create --key AIPCC-1 --body "text"`
+
 Discover more with this:
 
 ```
