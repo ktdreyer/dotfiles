@@ -30,6 +30,27 @@ With `acli`, descriptions must be plain text or ADF JSON. Jira does not render M
 - Create: `acli jira workitem create --project <PROJ> --type <Type> --summary "..." --description-file <file>`
 - Edit: `acli jira workitem edit --key <KEY> --description-file <file> --yes`
 
+## Setting the parent epic
+
+At creation time, set the parent with either approach:
+
+- Flag: `acli jira workitem create --parent <EPIC-KEY> ...`
+- JSON: set `"parentIssueId"` in `--from-json`
+
+`acli jira workitem edit` has no `--parent` flag and the edit JSON schema
+has no `parentIssueId` field. To set or change the parent epic on an
+existing issue, use the REST API:
+
+```bash
+curl -s -X PUT \
+  -u "${JIRA_EMAIL}:${JIRA_TOKEN}" \
+  -H "Content-Type: application/json" \
+  "https://${JIRA_SITE}/rest/api/3/issue/<KEY>" \
+  -d '{"fields":{"parent":{"key":"<EPIC-KEY>"}}}'
+```
+
+A 204 (empty) response means success.
+
 ## Custom fields (team, component, priority)
 
 `acli` supports custom fields via `additionalAttributes` in `--from-json` at
