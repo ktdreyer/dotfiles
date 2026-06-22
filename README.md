@@ -36,7 +36,11 @@ Plugins:
 
 Tips for logging into these various tools:
 
-* `acli`: Use a [personal API token](https://id.atlassian.com/manage-profile/security/api-tokens).
+* `acli`: Use a [personal API token](https://id.atlassian.com/manage-profile/security/api-tokens). From [instructions](https://developer.atlassian.com/cloud/acli/reference/commands/jira-auth-login/):
+  ```
+  # Prefix this with " " (space) to avoid putting the token into bash history:
+    echo (mytoken) | acli jira auth login --site "redhat.atlassian.net" --email "kdreyer@redhat.com" --token
+  ```
 
 * `glab`: Use a [personal access token](https://gitlab.com/-/user_settings/personal_access_tokens?scopes=api,write_repository).
    * For `Token name`, write `glab cli`. For `Description`, write `red hat laptop`, or your hostname, or anything that helps you remember the location at which you will store this token. Take the defaults for all other prompts.
