@@ -21,3 +21,12 @@ vim.api.nvim_create_autocmd("BufReadPost", {
     end
   end,
 })
+
+--
+vim.api.nvim_create_autocmd("SwapExists", {
+  pattern = "*",
+  callback = function()
+    vim.v.swapchoice = "o"
+  end,
+  desc = "Automatically open read-only if swap file exists",
+})
