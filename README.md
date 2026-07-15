@@ -90,3 +90,7 @@ Use `/output-style` -> "Explanatory" to help your engineering skills.
 * kubectl `ka` plugin - ([install](https://kubearchive.github.io/kubearchive/main/cli/installation.html)) view archived Konflux build logs
 * `syft` - compare container images for differences
 * `ec` - ([install](https://conforma.dev/docs/user-guide/cli.html)) for debugging conforma violations
+
+## To check out:
+
+* https://yazi-rs.github.io/docs/installation/
