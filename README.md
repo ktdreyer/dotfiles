@@ -83,10 +83,6 @@ Use `/output-style` -> "Explanatory" to help your engineering skills.
    ```
    ... and plug in the Google Gemini API key.
 
-* https://5ire.app/ - open-source alternative to Claude Desktop
-   ... uses Google Gemini API key.
-
-
 ## For RHAII and RHEL AI development:
 
 * `oras` - download AI models as OCI artifacts
