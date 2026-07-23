@@ -1,5 +1,113 @@
-#!/bin/bash
+#!/usr/bin/env python3
+"""Create a GitLab merge request with a Markdown-formatted description."""
 
-set -euxo pipefail
+import re
+import subprocess
+import sys
 
-glab mr create --fill --remove-source-branch --yes
+URL = re.compile(r'https?://\S+')
+FILE_EXT = re.compile(
+    r'(?<![`/\w])\b(\w[\w.-]*\.'
+    r'(?:py|txt|ya?ml|json|toml|cfg|conf|sh|md|rst|js|ts|go|rs|c|h|cpp'
+    r'|java|rb|sql|html|css|xml|ini|env|lock|log|spec|test))'
+    r'\b(?!`)',
+)
+FILE_PATH = re.compile(r'(?<![`\w:])(\b\S*?/\S+)\b(?!`)')
+SCREAMING_SNAKE = re.compile(r'(?<!`)(\b[A-Z][A-Z0-9]*_[A-Z0-9_]+\b)(?!`)')
+QUOTED_TERM = re.compile(r'"([^"\n]+)"')
+
+
+def markdownify(text):
+    urls = {}
+    def _stash_url(m):
+        key = f"\x00URL{len(urls)}\x00"
+        urls[key] = m.group(0)
+        return key
+    text = URL.sub(_stash_url, text)
+    text = QUOTED_TERM.sub(r'`\1`', text)
+    text = FILE_PATH.sub(r'`\1`', text)
+    text = FILE_EXT.sub(r'`\1`', text)
+    text = SCREAMING_SNAKE.sub(r'`\1`', text)
+    text = re.sub(r'`(`[^`]+`)`', r'\1', text)
+    for key, url in urls.items():
+        text = text.replace(key, url)
+    return text
+
+
+def get_default_branch():
+    output = subprocess.check_output(
+        ["git", "remote", "show", "origin"],
+        text=True,
+        stderr=subprocess.DEVNULL,
+    )
+    for line in output.splitlines():
+        line = line.strip()
+        if line.startswith("HEAD branch:"):
+            return line.split(":", 1)[1].strip()
+    return "main"
+
+
+def get_commits(target_branch):
+    log = subprocess.check_output(
+        ["git", "log", "--reverse", "--format=%H%x00%s%x00%b%x00",
+         f"{target_branch}..HEAD"],
+        text=True,
+    )
+    commits = []
+    for entry in log.split("\x00\n"):
+        parts = entry.split("\x00")
+        if len(parts) < 3:
+            continue
+        sha, subject, body = parts[0], parts[1], parts[2].strip()
+        if not sha:
+            continue
+        commits.append({"subject": subject, "body": body})
+    return commits
+
+
+def build_description(commits):
+    if not commits:
+        return ""
+    if len(commits) == 1:
+        return markdownify(commits[0]["body"])
+    lines = []
+    for c in commits:
+        lines.append(f"- {c['subject']}")
+    bodies = [c["body"] for c in commits if c["body"]]
+    if bodies:
+        lines.append("")
+        lines.append("---")
+        for c in commits:
+            if c["body"]:
+                lines.append("")
+                lines.append(f"**{c['subject']}**")
+                lines.append("")
+                lines.append(markdownify(c["body"]))
+    return "\n".join(lines)
+
+
+def main():
+    target = get_default_branch()
+    commits = get_commits(target)
+    if not commits:
+        print("No commits found ahead of", target, file=sys.stderr)
+        sys.exit(1)
+
+    title = commits[0]["subject"]
+    description = build_description(commits)
+
+    cmd = [
+        "glab", "mr", "create",
+        "--title", title,
+        "--remove-source-branch",
+        "--push",
+        "--yes",
+    ]
+    if description:
+        cmd.extend(["--description", description])
+
+    subprocess.run(cmd, check=True)
+
+
+if __name__ == "__main__":
+    main()
