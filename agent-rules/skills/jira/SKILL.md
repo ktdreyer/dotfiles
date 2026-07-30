@@ -3,21 +3,20 @@ name: jira
 description: Use when performing any Jira operation - creating, editing, searching, viewing, or transitioning issues. Prefers Atlassian MCP server, falls back to acli.
 ---
 
-Execute the `acli` utility to look up tickets. For example:
+## Viewing issues
 
-```
-acli jira workitem view AIPCC-1
-```
+Use the Atlassian MCP server with `responseContentFormat: "markdown"` to view tickets. This preserves inline hyperlinks that `acli` strips out.
 
-Look at comments on tickets: `acli jira workitem comment list --key AIPCC-1`
+Fall back to `acli jira workitem view <KEY>` if MCP returns an error.
 
-Add a comment: `acli jira workitem comment create --key AIPCC-1 --body "text"`
+## Comments
 
-Discover more with this:
+Use the Atlassian MCP server to read and write comments when possible.
 
-```
-acli jira workitem --help
-```
+Fall back to `acli`:
+- List: `acli jira workitem comment list --key AIPCC-1`
+- Add: `acli jira workitem comment create --key AIPCC-1 --body "text"`
+- More: `acli jira workitem --help`
 
 ## Creating and editing issues
 
