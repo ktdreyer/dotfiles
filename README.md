@@ -94,3 +94,4 @@ Use `/output-style` -> "Explanatory" to help your engineering skills.
 ## To check out:
 
 * https://yazi-rs.github.io/docs/installation/
+* https://github.com/wseaton/ujira
