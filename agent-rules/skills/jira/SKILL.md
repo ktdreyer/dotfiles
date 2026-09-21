@@ -20,9 +20,7 @@ Fall back to `acli`:
 
 ## Creating and editing issues
 
-For the AIPCC project: do *not* use the Atlassian MCP server. It cannot create or edit tickets in that project because it is open to the internet.
-
-Use the Atlassian MCP server with `contentFormat: "markdown"` when possible. Fall back to `acli` when MCP returns permission project errors (ECO-1358).
+Use the Atlassian MCP server with `contentFormat: "markdown"` when possible. Fall back to `acli` when MCP returns permission errors (ECO-1358).
 
 With `acli`, descriptions must be plain text or ADF JSON. Jira does not render Markdown and wiki markup when using the CLI. Write ADF JSON to a temp file and use `--description-file <file>`:
 
