@@ -52,6 +52,16 @@ Tips for logging into these various tools:
 
    To set up 2FA: when first logging in, click [Enroll a new Factor](https://iam.cloud.ibm.com/mysecurity/index.jsp). This form will prompt you to validate your identity. Enable "U2F". Tap your Yubikey when your browser prompts you.
 
+# Codex settings
+
+I use these MCP servers:
+
+```
+codex mcp add atlassian --url "https://mcp.atlassian.com/v1/mcp"
+codex mcp login atlassian
+codex mcp list
+```
+
 # Claude settings
 
 I use these MCP servers:
