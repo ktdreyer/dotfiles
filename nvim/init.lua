@@ -30,3 +30,13 @@ vim.api.nvim_create_autocmd("SwapExists", {
   end,
   desc = "Automatically open read-only if swap file exists",
 })
+
+--
+vim.pack.add({
+  { src = 'https://github.com/nvim-tree/nvim-web-devicons' }, -- optional
+  { src = 'https://github.com/nvim-tree/nvim-tree.lua' },
+})
+
+vim.opt.termguicolors = true
+-- empty setup using defaults
+require("nvim-tree").setup()
